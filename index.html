@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tile Selector MVP</title>
+</head>
+<body>
+
+    <h2>Tile Price Checker</h2>
+
+    <label for="tile-input">Select a Tile:</label>
+    <input list="tiles" id="tile-input" name="tile-choice">
+    
+    <datalist id="tiles"></datalist>
+
+    <p>Selected Tile Price: <span id="price-output">---</span></p>
+
+    <script>
+        // --- 1. Placeholder API Data ---
+        // In a real application, you would replace this with an actual fetch() call to your API.
+        let res,data;
+
+        (async()=>{
+         res = await fetch("static.json")
+         data = await TILE_API_DATA.json();})()
+
+        // This function simulates fetching and processing the API data
+        function loadTiles() {
+            const datalist = document.getElementById('tiles');
+            
+            // Clear existing options (if any)
+            datalist.innerHTML = ''; 
+
+            // Map the API data to a new structure for easy lookup
+            const tileMap = {}; 
+
+            TILE_API_DATA.forEach(tile => {
+                // Create the <option> element for the datalist
+                const option = document.createElement('option');
+                option.value = tile.productName; 
+                // We'll store the price in a data attribute for easy retrieval
+                option.setAttribute('data-price', (tile.productPrice * 1).toFixed(2));
+                datalist.appendChild(option);
+
+                // Populate the map for quick lookup based on tile name
+                tileMap[tile.productName] = tile.productPrice.toFixed(2);
+            });
+
+            return tileMap;
+        }
+
+        // --- 2. Event Handling for Input Change ---
+        function setupTileSelection(tileMap) {
+            const tileInput = document.getElementById('tile-input');
+            const priceOutput = document.getElementById('price-output');
+
+            tileInput.addEventListener('input', () => {
+                const selectedTileName = tileInput.value;
+                const price = tileMap[selectedTileName];
+                
+                if (price) {
+                    // Display the price if the selected value is a valid tile name
+                    priceOutput.textContent = `$${price} per tile`;
+                } else {
+                    // Clear the price if the input doesn't match a tile
+                    priceOutput.textContent = '---'; 
+                }
+            });
+        }
+
+        // --- 3. Run the application ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const tilePriceMap = loadTiles(); // Load data and get the lookup map
+            setupTileSelection(tilePriceMap); // Set up the input change listener
+        });
+    </script>
+
+</body>
+</html>
