@@ -18,11 +18,14 @@
     <script>
         // --- 1. Placeholder API Data ---
         // In a real application, you would replace this with an actual fetch() call to your API.
-        let res,data;
+        let res,data,TILE_API_DATA;
 
         (async()=>{
          res = await fetch("https://benasdom.github.io/tiles-api/static.json")
-         data = await TILE_API_DATA.json();})()
+         data = await TILE_API_DATA;
+         console.log(data)
+        
+        })()
 
         // This function simulates fetching and processing the API data
         function loadTiles() {
