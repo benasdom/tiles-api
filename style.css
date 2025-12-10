@@ -1,0 +1,235 @@
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .form-container {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        input[type="text"],
+        input[type="number"],
+        input[list="tiles"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        #price-output {
+            font-size: 20px;
+            font-weight: bold;
+            color: #2c3e50;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            display: inline-block;
+            min-width: 200px;
+        }
+        
+        .buttons-container {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        button {
+            padding: 12px 24px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        #view-list-btn {
+            background-color: #27ae60;
+        }
+        
+        #view-list-btn:hover {
+            background-color: #219653;
+        }
+        
+        #clear-list-btn {
+            background-color: #e74c3c;
+        }
+        
+        #clear-list-btn:hover {
+            background-color: #c0392b;
+        }
+        
+        /* Table Styles */
+        .spaces-table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .spaces-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .spaces-table th {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        .spaces-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+            vertical-align: middle;
+        }
+        
+        .spaces-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .spaces-table tr:hover {
+            background-color: #f1f8ff;
+        }
+        
+        .spaces-table .remove-btn {
+            padding: 6px 12px;
+            background-color: #e74c3c;
+            font-size: 14px;
+        }
+        
+        .spaces-table .remove-btn:hover {
+            background-color: #c0392b;
+        }
+        
+        /* Totals Container */
+        .totals-container {
+            margin-top: 30px;
+        }
+        
+        .totals-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .totals-box h4 {
+            margin-bottom: 20px;
+            font-size: 22px;
+            text-align: center;
+        }
+        
+        .totals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .total-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .total-label {
+            font-weight: bold;
+        }
+        
+        .total-value {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .total-discounted {
+            color: #2ecc71;
+        }
+        
+        .total-savings {
+            color: #f39c12;
+        }
+        
+        .space-row {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* spacing between columns */
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.space-row .col {
+    min-width: 100px;
+    font-size: 13px;;
+    
+    /* adjust as needed */
+}
+
+.remove-btn {
+    margin-left: auto; /* push the button to the far right */
+}
+.ms-box{}
+.ms-top{
+    display: flex;
+    justify-content: space-between;
+}
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .buttons-container {
+                flex-direction: column;
+            }
+            
+            .spaces-table th,
+            .spaces-table td {
+                padding: 8px 10px;
+                font-size: 14px;
+            }
+            
+            .totals-grid {
+                grid-template-columns: 1fr;
+            }
+        }
