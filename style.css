@@ -2,10 +2,15 @@
             padding: 0;
             margin: 0;
             box-sizing: border-box;
-        }
+             font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", 
+                 "Lucida Sans", Tahoma, sans-serif;
+    font-weight: 700; /* Bold for headings */
+}
+
         
         body {
-            font-family: Arial, sans-serif;
+            position:relative;
+            height:100vh;
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
@@ -211,10 +216,212 @@
 .remove-btn {
     margin-left: auto; /* push the button to the far right */
 }
-.ms-box{}
+.ms-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+    margin:auto;
+}
 .ms-top{
+    position:relative;
     display: flex;
     justify-content: space-between;
+    font-size: 12px;
+    margin-top: 50px;
+    align-items: center;
+    width:100%;
+}
+.sub-top{
+    display: flex;
+    width:100%;
+
+    flex-direction: column;
+}
+.ms-top-left{
+    display: flex;
+    width:60%;
+
+}
+.ms-top-right{
+    display: flex;
+    flex-direction: column;
+    width:25%;
+    font-size: 18px;
+    font-weight: 700;
+    height:100%;
+
+}
+.ms-top-left-image{
+        display: flex;
+    height:100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ms-top-left-text{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left:10px;
+    flex-direction: column;
+    height:100%;
+}
+.a{
+    color:darkred;
+}
+.invoice-info{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    width:100%;
+
+   
+}
+.buyer-info{
+    display: flex;
+     justify-content:space-between;
+    align-items: flex-end;
+    flex-direction: row;
+    width:100%;
+    margin-bottom:50px;
+
+}
+.alignright{
+    display: flex;
+    justify-content: right !important;
+    font-weight: 700;
+    align-items:center;
+        word-wrap: break-word;
+    white-space: wrap;
+    word-break: break-all;
+
+}
+.preped{
+    width: 100%;
+    font-size: 10px;
+}
+.quote{
+    margin-top:100px;
+}
+.footer-box{
+width:100%;
+}
+.footer-image{
+    width:50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height:100%;
+}
+.footer{
+bottom:0 !important;
+display: flex;
+flex-direction: row;
+margin:auto;
+justify-content: center;
+margin-bottom: 10px;
+margin-top:50px;
+}
+.foot-text{
+    padding-left: 10px;
+    display: flex;
+    font-size: 10px;
+    text-align: center;
+    flex-direction: column;
+}
+.thank-u{
+    width:100%;
+    text-align: center;
+    padding:5px;
+    font-size: 12px;
+    color:darkred;
+}
+.alignleft{
+    display: flex;
+    justify-content: left !important;
+    font-weight: 700;
+    align-items:center;
+        word-wrap: break-word;
+
+}
+.buyer{
+    font-size: 15px;
+}
+.date{
+    font-size: 12px;
+}
+.sso{
+    color:darkred;
+}
+.micasso{
+    font-size: 25px;
+    margin:auto;
+    text-align: center;
+    font-weight: 700;
+    margin-top:-12px;
+    width:70%;
+    position: absolute;
+}
+.table-box
+{
+    display: flex;
+    width:100%;
+    justify-content: center;
+    border-right:1px solid black;
+    flex-direction: column;
+    align-items: center;
+}
+.thead{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+}
+.th {
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 600;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    width: 150px;
+    padding:2px;
+    padding-top:5px;
+    padding-bottom:5px;
+    border-left:1px solid black;
+    word-wrap: break-word;
+    white-space: wrap;
+    word-break: break-all;
+}
+.trows{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+}
+.hide{
+    border-bottom: 1px solid transparent !important;
+    border-left: 1px solid transparent !important;
+}
+.tr{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    padding:2px;
+    padding-top:5px;
+        padding-bottom:5px;
+    min-height: 100%;
+    font-size: 10px;
+    white-space: wrap;
+        border-left:1px solid black;
+        border-bottom: 1px solid black;
+
+}
+.reduce{
+    width:100px !important;
 }
 
         /* Responsive adjustments */
@@ -232,4 +439,34 @@
             .totals-grid {
                 grid-template-columns: 1fr;
             }
+        }
+           @media print {
+           .form-container, h2{
+            display: none !important;
+           }
+           .ms-box{
+            display: block !important;
+           }
+            /* Remove margins from @page for better control */
+            @page {
+                margin:1in;
+                size: A4; /* Or letter, legal, etc. */
+            }
+            
+          
+            
+            /* Footer styling - FIXED POSITION */
+            .footer-box {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                text-align: center;
+                font-size: 10pt;
+                color: #666;
+                border-top: 1px solid #ccc;
+                padding: 10px 0;
+                background: white;
+            }
+       
         }

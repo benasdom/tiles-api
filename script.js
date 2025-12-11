@@ -1,5 +1,6 @@
 let dataset;
 let spacesArray = []; // Global array to store all spaces
+let printPreview = ``;
 
 fetch("https://benasdom.github.io/tiles-api/static.json")
     .then((res) => res.json())
@@ -38,7 +39,7 @@ fetch("https://benasdom.github.io/tiles-api/static.json")
     });
 
 // Function to calculate total price and return complete data object
-function calculateTotalWithData(selectedOption, quantity = 1, spaceName = '') {
+function calculateTotalWithData(selectedOption, quantity = 1, spaceName = '',discountAmount) {
     // Get values from dataset
     const squareMeter = parseFloat(selectedOption.dataset.squareMeter);
     const pricePerUnit = parseFloat(selectedOption.dataset.price);
@@ -47,10 +48,12 @@ function calculateTotalWithData(selectedOption, quantity = 1, spaceName = '') {
     // Calculate total
     let totalPrice = 0;
     let discounted = 0;
+    let discount = 0;
     if (!isNaN(squareMeter) && !isNaN(pricePerUnit)) {
         let boxes = Math.ceil((quantityNum / squareMeter));
         totalPrice = boxes * squareMeter * pricePerUnit;
-        discounted = totalPrice * (0.9);
+        discount = (discountAmount/100) * totalPrice;
+        discounted = totalPrice - discount;
     }
     
     // Get all data from the option element
@@ -65,6 +68,7 @@ function calculateTotalWithData(selectedOption, quantity = 1, spaceName = '') {
         quantity: quantityNum,
         boxes: Math.ceil((quantityNum / squareMeter)),
         totalPrice: totalPrice,
+        discount,
         discountedPrice: discounted,
         timestamp: new Date().toISOString() // Add timestamp for tracking
     };
@@ -87,6 +91,7 @@ function getCurrentSelectionData() {
     const spaceNameInput = document.getElementById('space-name-input');
     const inputElement = document.getElementById('tile-input');
     const quantityInput = document.getElementById('quantity-input');
+    const quantityDiscount = document.getElementById('quantity-discount');
     
     const spaceName = spaceNameInput.value.trim();
     const selectedValue = inputElement.value;
@@ -104,7 +109,8 @@ function getCurrentSelectionData() {
     
     if (selectedOption && selectedOption.dataset.squareMeter && selectedOption.dataset.price) {
         const quantity = parseInt(quantityInput.value) || 1;
-        return calculateTotalWithData(selectedOption, quantity, spaceName);
+        const discountAmount = parseInt(quantityDiscount) || 0;
+        return calculateTotalWithData(selectedOption, quantity, spaceName, discountAmount);
     }
     
     return null;
@@ -118,10 +124,8 @@ function updatePriceDisplay() {
     if (selectedData) {
         // Update the price display
         priceOutput.textContent = `₵${selectedData.totalPrice.toFixed(2)} (Discounted: ₵${selectedData.discountedPrice.toFixed(2)})`;
-        
         // Store the complete data in a global variable
         window.currentProductData = selectedData;
-        
         return selectedData;
     } else {
         priceOutput.textContent = "---";
@@ -132,12 +136,11 @@ function updatePriceDisplay() {
 
 // Function to add current space to the array
 function addSpaceToList() {
-    const selectedData = getCurrentSelectionData();
+const selectedData = getCurrentSelectionData();
     
     if (selectedData) {
         // Add to the global array
         spacesArray.push(selectedData);
-        
         // Update the display
         updateSpacesListDisplay();
         
@@ -162,7 +165,52 @@ function updateSpacesListDisplay() {
         listContainer.innerHTML = '<p>No spaces added yet.</p>';
         return;
     }
-    
+    let printOut = `
+    <div class="ms-box">
+    <div class="ms-top">
+        <div class="ms-top-left">
+            <div class="ms-top-left-image">
+                <img width="60px" src="./assets/pic.png"/>
+            </div>
+            <div class="ms-top-left-text">
+            <div class="micasso">M<span class="sso">ICASSO</span></div>
+                <strong><span>BEAUTIFUL HOME DECOR</span></strong>
+                <span>Helping you make the right decision about your home</span>
+            </div>
+            
+        </div>
+        <div class="ms-top-right" contenteditable>QUOTATION
+            
+        </div>
+    </div>
+    <br>
+    <div class="sub-top">
+        <span>COSWAY STREET NEAR HAPPY HOME. HAATSO, GE-191-4780</span>
+<a href="https://maps.app.goo.gl/WYFcuX3Bc75Wdg8fA"><span class="a">https://maps.app.goo.gl/WYFcuX3Bc75Wdg8fA</span></a>
+<span>0302555103| (+233) 0533991885</span>
+<i>info.beautifulhomedecor@gmail.com </i>
+
+    </div>
+<div class="invoice-info">
+    <div class="buyer-info">
+        <div class="buyer">${"TO: "} <span contenteditable>Mr. Amponsah</span></div>
+        <div class="date" onload="let today=new Date();this.innerHTML='Date:'+(today.getMonth() + 1)+'/'+today.getDate()+'/'+today.getFullYear()"></div>
+     </div>
+     
+
+</div>
+   <div class="table-box">
+        <div class="thead">
+            <div class="th">TILE</div>            
+            <div class="th">DESCRIPTION</div>            
+            <div class="th">SIZE</div>            
+            <div class="th reduce">QTY</div>            
+            <div class="th reduce">SQM</div>            
+            <div class="th">TOTAL SQM</div>            
+            <div class="th">UNIT PRICE GHS</div>            
+            <div class="th">TOTAL GHS</div>
+                </div>`
+
     let html = `<h3 >Spaces Added:</h3><ul>
             <li class="space-row">
             <span class="col product">Product Name</span>
@@ -178,6 +226,18 @@ function updateSpacesListDisplay() {
     ;
     
  spacesArray.forEach((space, index) => {
+    printOut+=`
+      <div class="trows">
+            <div class="tr">${space.spaceName}</div>
+<div class="tr">${space.productName}</div>
+<div class="tr">${space.fullDetails.productTexture}</div>
+<div class="tr reduce">${space.quantity} m²</div>
+<div class="tr reduce">${space.squareMeter} m²</div>
+<div class="tr">${space.boxes} boxes</div>
+<div class="tr">${space.totalPrice.toFixed(2)}</div>
+<div class="tr">${space.discountedPrice.toFixed(2)}</div>
+        </div>
+      `;
     html += `
         <li class="space-row">
             <span contenteditable class="col name">${space.spaceName}</span>
@@ -191,19 +251,76 @@ function updateSpacesListDisplay() {
             <button onclick="removeSpace(${index})" class="remove-btn">Remove</button>
         </li>
     `;
-});
-
-    
-    html += '</ul>';
+});   
+    html += '</ul>'; 
     
     // Calculate totals
     const grandTotal = spacesArray.reduce((sum, space) => sum + space.totalPrice, 0);
+    const applieddiscount = spacesArray.reduce((sum, space) => sum + space.discount, 0);
     const grandDiscounted = spacesArray.reduce((sum, space) => sum + space.discountedPrice, 0);
-    
+        printOut += `
+    <div class="trows">
+            <div class="tr hide"></div>
+            <div class="tr hide"></div>
+            <div class="tr hide"></div>
+            <div class="tr reduce hide"></div>
+            <div class="tr reduce hide"></div>
+            <div class="tr hide"></div>
+            <div class="tr alignleft">SUBTOTAL</div>
+            <div class="tr alignright">${grandTotal.toFixed(2)}</div>
+        </div>
+        <div class="trows">
+            <div class="tr hide"></div>
+            <div class="tr hide"></div>
+            <div class="tr hide"></div>
+            <div class="tr reduce hide"></div>
+            <div class="tr reduce hide"></div>
+            <div class="tr hide"></div>
+            <div class="tr alignleft">DISCOUNT</div>
+            <div class="tr alignright">${applieddiscount.toFixed(2)}</div>
+        </div>
+        <div class="trows">
+            <div class="tr hide"></div>
+            <div class="tr hide"></div>
+            <div class="tr hide"></div>
+            <div class="tr reduce hide"></div>
+            <div class="tr reduce hide"></div>
+            <div class="tr hide"></div>
+            <div class="tr alignleft">GRANDTOTAL</div>
+            <div class="tr alignright">${grandDiscounted.toFixed(2)}</div>
+        </div>
+    </div>
+<div class="preped">PREPARED BY: BEAUTIFUL HOME DECOR</div>
+<div class="quote">If you have any questions, concerning this quotation, please contact us</div>
+<div class="thank-u">WE APPRECIATE YOUR BUSINESS WITH US!</div>
+</div>
+<div class="footer-box">
+    <div class="footer">
+        <div class="footer-img">
+    <img src="./assets/pic2.png" width="40" alt="">
+
+        </div>
+    <div class="foot-text">
+        
+        <div class="div">
+            WE DEAL IN TILES, TILING CONTRACTS, TILING MATERIALS, SANITARY WARE,
+        </div>
+        <div class="div">
+            CEMENT BLOCKS AND PROCUREMENT OF BUILDING MATERIALS FOR PROJECTS,
+        </div>
+        <div class="div">
+            FURNITURE, KTICHENS, DOORS, LOCKS AND HANDLES.
+        </div>
+    </div>
+
+    </div>    
+</div>
+    `
+
     html += `<h4>Grand Total: ₵${grandTotal.toFixed(2)} </h4><h4> Discounted Total: ₵${grandDiscounted.toFixed(2)}</h4>`;
-    
-    listContainer.innerHTML = html;
+    listContainer.innerHTML = printOut;
 }
+
 
 // Function to remove a space from the array
 function removeSpace(index) {
@@ -274,6 +391,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const quantityInput = document.getElementById('quantity-input');
     const addSpaceBtn = document.getElementById('add-space-btn');
     const viewListBtn = document.getElementById('view-list-btn');
+    const quantityDiscount = document.getElementById('quantity-discount');
     const clearListBtn = document.getElementById('clear-list-btn');
     
     // Update price when space name changes
@@ -281,18 +399,21 @@ document.addEventListener('DOMContentLoaded', function() {
         spaceNameInput.addEventListener('input', updatePriceDisplay);
         spaceNameInput.addEventListener('change', updatePriceDisplay);
     }
-    
-    // Update price when tile selection changes
+
     if (inputElement) {
         inputElement.addEventListener('change', updatePriceDisplay);
         inputElement.addEventListener('input', updatePriceDisplay);
     }
-    
     // Update price when quantity changes
     if (quantityInput) {
         quantityInput.addEventListener('input', updatePriceDisplay);
         quantityInput.addEventListener('change', updatePriceDisplay);
     }
+    if (quantityDiscount) {
+        quantityDiscount.addEventListener('input', updatePriceDisplay);
+        quantityDiscount.addEventListener('change', updatePriceDisplay);
+    }
+    // Update price when tile selection changes
     
     // Button event listeners
     if (addSpaceBtn) {
