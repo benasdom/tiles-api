@@ -54,6 +54,7 @@ function calculateTotalWithData(selectedOption, quantity = 1, spaceName = '',dis
         totalPrice = boxes * squareMeter * pricePerUnit;
         discount = (discountAmount/100) * totalPrice;
         discounted = totalPrice - discount;
+        estimatedQuantity = boxes * squareMeter;
     }
     
     // Get all data from the option element
@@ -65,7 +66,7 @@ function calculateTotalWithData(selectedOption, quantity = 1, spaceName = '',dis
         productDimension: selectedOption.dataset.dimension,
         squareMeter: squareMeter,
         pricePerUnit: pricePerUnit,
-        quantity: quantityNum,
+        quantity: estimatedQuantity,
         boxes: Math.ceil((quantityNum / squareMeter)),
         totalPrice: totalPrice,
         discount,
@@ -95,6 +96,7 @@ function getCurrentSelectionData() {
     
     const spaceName = spaceNameInput.value.trim();
     const selectedValue = inputElement.value;
+    const qdiscount = quantityDiscount.value;
     const datalist = document.querySelector('datalist');
     const options = datalist.querySelectorAll('option');
     
@@ -109,7 +111,7 @@ function getCurrentSelectionData() {
     
     if (selectedOption && selectedOption.dataset.squareMeter && selectedOption.dataset.price) {
         const quantity = parseInt(quantityInput.value) || 1;
-        const discountAmount = parseInt(quantityDiscount) || 0;
+        const discountAmount = parseInt(qdiscount)||0;
         return calculateTotalWithData(selectedOption, quantity, spaceName, discountAmount);
     }
     
@@ -193,7 +195,7 @@ function updateSpacesListDisplay() {
     </div>
 <div class="invoice-info">
     <div class="buyer-info">
-        <div class="buyer">${"TO: "} <span contenteditable>Mr. Amponsah</span></div>
+        <div class="buyer">${"TO: "} <span contenteditable>_________________</span></div>
         <div class="date" onload="let today=new Date();this.innerHTML='Date:'+(today.getMonth() + 1)+'/'+today.getDate()+'/'+today.getFullYear()"></div>
      </div>
      
@@ -228,14 +230,14 @@ function updateSpacesListDisplay() {
  spacesArray.forEach((space, index) => {
     printOut+=`
       <div class="trows">
-            <div class="tr">${space.spaceName}</div>
-<div class="tr">${space.productName}</div>
-<div class="tr">${space.fullDetails.productTexture}</div>
-<div class="tr reduce">${space.quantity} m²</div>
+            <div class="tr">${space.productName}</div>
+<div class="tr">${space.spaceName}</div>
+<div class="tr">${space.fullDetails.productDimension}</div>
+<div class="tr reduce">${space.boxes} bxs</div>
 <div class="tr reduce">${space.squareMeter} m²</div>
-<div class="tr">${space.boxes} boxes</div>
-<div class="tr">${space.totalPrice.toFixed(2)}</div>
-<div class="tr">${space.discountedPrice.toFixed(2)}</div>
+<div class="tr alignright">${space.quantity.toFixed(2)} </div>
+<div class="tr alignright">${space.totalPrice.toFixed(2)}</div>
+<div class="tr alignright">${space.discountedPrice.toFixed(2)}</div>
         </div>
       `;
     html += `
@@ -243,7 +245,7 @@ function updateSpacesListDisplay() {
             <span contenteditable class="col name">${space.spaceName}</span>
             <span class="col product">${space.productName}</span>
             <span class="col qty">${space.fullDetails.productTexture}</span>
-            <span class="col qty">${space.quantity} m²</span>
+            <span class="col qty ">${space.quantity} m²</span>
             <span class="col qty">${space.squareMeter} m²</span>
             <span class="col boxes">${space.boxes} boxes</span>
             <span class="col total">₵${space.totalPrice.toFixed(2)}</span>

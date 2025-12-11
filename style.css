@@ -229,7 +229,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 12px;
-    margin-top: 50px;
+    margin-top: 20px;
     align-items: center;
     width:100%;
 }
@@ -249,6 +249,7 @@
     flex-direction: column;
     width:25%;
     font-size: 18px;
+    text-transform: uppercase;
     font-weight: 700;
     height:100%;
 
@@ -293,6 +294,8 @@
     justify-content: right !important;
     font-weight: 700;
     align-items:center;
+    padding:0 !important;
+    padding-right: 4px !important;
         word-wrap: break-word;
     white-space: wrap;
     word-break: break-all;
@@ -342,12 +345,15 @@ margin-top:50px;
     display: flex;
     justify-content: left !important;
     font-weight: 700;
+        padding:0 !important;
+    padding-left: 4px !important;
     align-items:center;
         word-wrap: break-word;
 
 }
 .buyer{
     font-size: 15px;
+    text-transform: uppercase;
 }
 .date{
     font-size: 12px;
@@ -359,9 +365,9 @@ margin-top:50px;
     font-size: 25px;
     margin:auto;
     text-align: center;
-    font-weight: 700;
+    font-weight: 900;
     margin-top:-12px;
-    width:70%;
+    width:60%;
     position: absolute;
 }
 .table-box
@@ -440,33 +446,99 @@ margin-top:50px;
                 grid-template-columns: 1fr;
             }
         }
-           @media print {
-           .form-container, h2{
-            display: none !important;
-           }
-           .ms-box{
-            display: block !important;
-           }
-            /* Remove margins from @page for better control */
-            @page {
-                margin:1in;
-                size: A4; /* Or letter, legal, etc. */
-            }
-            
-          
-            
-            /* Footer styling - FIXED POSITION */
-            .footer-box {
-                position: fixed;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                text-align: center;
-                font-size: 10pt;
-                color: #666;
-                border-top: 1px solid #ccc;
-                padding: 10px 0;
-                background: white;
-            }
-       
-        }
+          @media print {
+    /* Hide all form elements and buttons */
+    .form-container, 
+    h2,
+    .buttons-container,
+    .form-group,
+    button,
+    input,
+    label,
+    .print-instructions {
+        display: none !important;
+    }
+    
+    /* Reset body for printing */
+    body {
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: white !important;
+        position: relative !important;
+        max-width: 100% !important;
+        font-size: 11pt !important;
+    }
+    
+    /* Page setup */
+    @page {
+        margin: 15mm !important;
+        size: A4 !important;
+    }
+    
+    /* Main container */
+    .ms-box {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+    }
+    
+    /* Table adjustments */
+    .table-box {
+        width: 100% !important;
+        margin: 20px 0 !important;
+    }
+    
+    .th, .tr {
+        font-size: 9pt !important;
+        padding: 4px 2px !important;
+    }
+    
+    /* Ensure page breaks work properly */
+    .trows {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+    
+    /* Footer positioning - FIXED */
+    .footer-box {
+        position: relative !important;
+        bottom: auto !important;
+        margin-top: 50px !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+    
+    .footer {
+        position: relative !important;
+        bottom: auto !important;
+        margin-bottom: 20px !important;
+    }
+    
+    
+    /* Remove shadows */
+    * {
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    /* Images */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    
+    /* Page breaks */
+    .page-break {
+        page-break-before: always !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Editable fields */
+    [contenteditable="true"] {
+        border-bottom: 1px dashed #ccc !important;
+    }
+}
