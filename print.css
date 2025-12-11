@@ -88,9 +88,5 @@
         margin: 0 !important;
         padding: 0 !important;
     }
-    
-    /* Editable fields */
-    [contenteditable="true"] {
-        border-bottom: 1px dashed #ccc !important;
-    }
+ 
 }
