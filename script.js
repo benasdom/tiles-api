@@ -175,7 +175,7 @@ function updateSpacesListDisplay() {
                 <img width="60px" src="./assets/pic.png"/>
             </div>
             <div class="ms-top-left-text">
-            <div class="micasso">M<span class="sso">ICASSO</span></div>
+            <div class="micasso" contenteditable>M<span class="sso">ICASSO</span></div>
                 <strong><span>BEAUTIFUL HOME DECOR</span></strong>
                 <span>Helping you make the right decision about your home</span>
             </div>
@@ -293,7 +293,7 @@ function updateSpacesListDisplay() {
         </div>
     </div>
 <div class="preped">PREPARED BY: BEAUTIFUL HOME DECOR</div>
-<div class="quote">If you have any questions, concerning this quotation, please contact us</div>
+<div class="quote" contenteditable>If you have any questions, concerning this quotation, please contact us</div>
 <div class="thank-u">WE APPRECIATE YOUR BUSINESS WITH US!</div>
 </div>
 <div class="footer-box">

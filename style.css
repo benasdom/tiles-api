@@ -271,6 +271,7 @@
 }
 .a{
     color:darkred;
+    text-decoration: none;
 }
 .invoice-info{
     display: flex;
