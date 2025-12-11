@@ -1,0 +1,15 @@
+    @media (max-width: 768px) {
+            .buttons-container {
+                flex-direction: column;
+            }
+            
+            .spaces-table th,
+            .spaces-table td {
+                padding: 8px 10px;
+                font-size: 14px;
+            }
+            
+            .totals-grid {
+                grid-template-columns: 1fr;
+            }
+        }
