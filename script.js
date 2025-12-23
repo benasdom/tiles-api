@@ -213,7 +213,7 @@ function updateSpacesListDisplay() {
             <div class="th">TOTAL GHS</div>
                 </div>`
 
-    let html = `<h3 >Spaces Added:</h3><ul>
+    let html = `<h3 class="no-print">Spaces Added:</h3><ul>
             <li class="space-row">
             <span class="col product">Product Name</span>
             <span class="col qty"> Texture </span>
@@ -319,8 +319,8 @@ function updateSpacesListDisplay() {
 </div>
     `
 
-    html += `<h4>Grand Total: ₵${grandTotal.toFixed(2)} </h4><h4> Discounted Total: ₵${grandDiscounted.toFixed(2)}</h4>`;
-    listContainer.innerHTML = printOut;
+    html += `<h4 class="no-print">Grand Total: ₵${grandTotal.toFixed(2)} </h4><h4 class="no-print> Discounted Total: ₵${grandDiscounted.toFixed(2)}</h4>`;
+    listContainer.innerHTML = html+printOut;
 }
 
 
