@@ -236,7 +236,7 @@ function updateSpacesListDisplay() {
 <div class="tr reduce">${space.boxes} bxs</div>
 <div class="tr reduce">${space.squareMeter} m²</div>
 <div class="tr alignright">${space.quantity.toFixed(2)} </div>
-<div class="tr alignright">${space.fullDetails.productPrice.toFixed(2)}</div>
+<div class="tr alignright">${space.fullDetails.productPrice}</div>
 <div class="tr alignright">${space.totalPrice.toFixed(2)}</div>
         </div>
       `;
