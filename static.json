@@ -1981,6 +1981,17 @@
     },
     {
       "brandName": "Beautiful Home Decor",
+      "productName": "MARMI B. CALACATTA",
+      "country": "GANI",
+      "productType": "Tile",
+      "squareMeter": "1.44",
+      "packsInBox": "4",
+      "productPrice": "350",
+      "productDimension": "60 x 60",
+      "productTexture": ""
+    },
+    {
+      "brandName": "Beautiful Home Decor",
       "productName": "MARNOREA PORT LAURENT",
       "country": "ITALIAN",
       "productType": "Tile",
