@@ -269,6 +269,16 @@
     flex-direction: column;
     height:100%;
 }
+.labels{
+    display: flex;
+    height:50px;
+    background:rgb(211, 81, 11);
+    padding:10px;
+    color:white;
+    border-radius: 10px;
+    width:100%;
+    overflow-x: scroll;
+}
 .a{
     color:darkred;
     text-decoration: none;

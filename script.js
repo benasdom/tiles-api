@@ -121,16 +121,27 @@ function getCurrentSelectionData() {
 // Update price display and make data available
 function updatePriceDisplay() {
     const priceOutput = document.getElementById('price-output');
+    const labelsElement = document.querySelector('.labels');
     const selectedData = getCurrentSelectionData();
     
     if (selectedData) {
         // Update the price display
         priceOutput.textContent = `₵${selectedData.totalPrice.toFixed(2)} (Discounted: ₵${selectedData.discountedPrice.toFixed(2)})`;
+        
+        // Update the labels element with tile information separated by "-"
+        if (labelsElement) {
+            const labelText = `${selectedData.productName} - ${selectedData.fullDetails.productDimension} - ${selectedData.brandName} - (₵ ${selectedData.fullDetails.productPrice})`;
+            labelsElement.textContent = labelText;
+        }
+        
         // Store the complete data in a global variable
         window.currentProductData = selectedData;
         return selectedData;
     } else {
         priceOutput.textContent = "---";
+        if (labelsElement) {
+            labelsElement.textContent = '';
+        }
         window.currentProductData = null;
         return null;
     }
