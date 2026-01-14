@@ -5,7 +5,7 @@ let printPreview = ``;
 fetch("https://benasdom.github.io/tiles-api/static.json")
     .then((res) => res.json())
     .then(res => {
-        let data = [...res.data,res.bhd];
+        let data = [...res.data,...res.bhd];
         dataset = data;
         let mydatalist = document.querySelector("datalist");
         
