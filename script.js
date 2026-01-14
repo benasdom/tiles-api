@@ -161,7 +161,7 @@ const selectedData = getCurrentSelectionData();
         // clearForm();
         
         // Show confirmation
-        alert(`"${selectedData.spaceName}" added to the list! Total spaces: ${spacesArray.length}`);
+        confirm(`"${selectedData.spaceName}" added to the list! Total spaces: ${spacesArray.length}`);
         
         console.log("Added to array:", selectedData);
     } else {
