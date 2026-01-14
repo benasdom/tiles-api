@@ -151,7 +151,7 @@ function updatePriceDisplay() {
 function addSpaceToList() {
 const selectedData = getCurrentSelectionData();
     
-    if (selectedData) {
+    if (selectedData && confirm("confirm")) {
         // Add to the global array
         spacesArray.push(selectedData);
         // Update the display
@@ -161,7 +161,7 @@ const selectedData = getCurrentSelectionData();
         // clearForm();
         
         // Show confirmation
-        confirm(`"${selectedData.spaceName}" added to the list! Total spaces: ${spacesArray.length}`);
+        alert(`"${selectedData.spaceName}" added to the list! Total spaces: ${spacesArray.length}`);
         
         console.log("Added to array:", selectedData);
     } else {
@@ -178,6 +178,8 @@ function updateSpacesListDisplay() {
         listContainer.innerHTML = '<p>No spaces added yet.</p>';
         return;
     }
+    let today=new Date();
+    let mydated= (today.getMonth() + 1)+'/'+today.getDate()+'/'+today.getFullYear()
     let printOut = `
     <div class="ms-box">
     <div class="ms-top">
@@ -192,7 +194,9 @@ function updateSpacesListDisplay() {
             </div>
             
         </div>
-        <div class="ms-top-right" contenteditable>QUOTATION
+        <div class="ms-top-right" contenteditable><span class="f-end">QUOTATION</span>
+        <span class="inv-id">invoice#</span>
+
             
         </div>
     </div>
@@ -207,7 +211,7 @@ function updateSpacesListDisplay() {
 <div class="invoice-info">
     <div class="buyer-info">
         <div class="buyer">${"TO: "} <span contenteditable>_________________</span></div>
-        <div class="date" onload="let today=new Date();this.innerHTML='Date:'+(today.getMonth() + 1)+'/'+today.getDate()+'/'+today.getFullYear()"></div>
+        <div class="date" contenteditable>DATE: ${mydated}</div>
      </div>
      
 
@@ -244,8 +248,8 @@ function updateSpacesListDisplay() {
             <div class="tr">${space.productName}</div>
 <div class="tr">${space.spaceName}</div>
 <div class="tr">${space.fullDetails.productDimension}</div>
-<div class="tr reduce">${space.boxes} bxs</div>
 <div class="tr reduce">${space.squareMeter} m²</div>
+<div class="tr reduce">${space.boxes} bxs</div>
 <div class="tr alignright">${space.quantity.toFixed(2)} </div>
 <div class="tr alignright">${space.fullDetails.productPrice}</div>
 <div class="tr alignright">${space.totalPrice.toFixed(2)}</div>
@@ -256,9 +260,9 @@ function updateSpacesListDisplay() {
             <span contenteditable class="col name">${space.spaceName}</span>
             <span class="col product">${space.productName}</span>
             <span class="col qty">${space.fullDetails.productTexture}</span>
-            <span class="col qty ">${space.quantity} m²</span>
             <span class="col qty">${space.squareMeter} m²</span>
             <span class="col boxes">${space.boxes} boxes</span>
+            <span class="col qty ">${space.quantity} m²</span>
             <span class="col total">₵${space.totalPrice.toFixed(2)}</span>
             <span class="col discounted">₵${space.discountedPrice.toFixed(2)}</span>
             <button onclick="removeSpace(${index})" class="remove-btn">Remove</button>
@@ -269,9 +273,21 @@ function updateSpacesListDisplay() {
     
     // Calculate totals
     const grandTotal = spacesArray.reduce((sum, space) => sum + space.totalPrice, 0);
+    const totalBoxes = spacesArray.reduce((sum, space) => sum + space.boxes, 0);
+    const totalQuantity = spacesArray.reduce((sum, space) => sum + space.quantity, 0);
     const applieddiscount = spacesArray.reduce((sum, space) => sum + space.discount, 0);
     const grandDiscounted = spacesArray.reduce((sum, space) => sum + space.discountedPrice, 0);
         printOut += `
+        <div class="trows">
+            <div class="tr">TOTAL SQM & BOX</div>
+<div class="tr"></div>
+<div class="tr"></div>
+<div class="tr reduce"></div>
+<div class="tr reduce">${totalBoxes} bxs</div>
+<div class="tr alignright">${totalQuantity.toFixed(2)} </div>
+<div class="tr alignright"></div>
+<div class="tr alignright"></div>
+        </div>
     <div class="trows">
             <div class="tr hide"></div>
             <div class="tr hide"></div>

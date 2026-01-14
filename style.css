@@ -269,6 +269,14 @@
     flex-direction: column;
     height:100%;
 }
+.inv-id{
+    font-size: 12px;
+    font-weight: lighter;
+    align-self: flex-end;
+}
+.f-end{
+    align-self: flex-end;
+}
 .labels{
     display: flex;
     height:50px;
