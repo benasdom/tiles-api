@@ -179,7 +179,7 @@ function updateSpacesListDisplay() {
         return;
     }
     let today=new Date();
-    let mydated= (today.getDate() + 1)+'/'+today.getMonth()+'/'+today.getFullYear()
+    let mydated= (today.getDate())+'/'+(today.getMonth() + 1)+'/'+today.getFullYear()
     let printOut = `
     <div class="ms-box">
     <div class="ms-top">
