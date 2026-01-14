@@ -1506,6 +1506,17 @@
     },
     {
       "brandName": "Beautiful Home Decor",
+      "productName": "CONCRETE IVORY",
+      "country": "ITALIAN",
+      "productType": "Tile",
+      "squareMeter": "1.46",
+      "packsInBox": "5",
+      "productPrice": "300",
+      "productDimension": "60.4 X 60.4",
+      "productTexture": ""
+    },
+    {
+      "brandName": "Beautiful Home Decor",
       "productName": "CONCRETE LIGHT GREY",
       "country": "ITALIAN",
       "productType": "Tile",
@@ -1548,6 +1559,19 @@
       "productDimension": "29.7 x 59.5",
       "productTexture": ""
     },
+    
+    {
+      "brandName": "Beautiful Home Decor",
+      "productName": "CREOS CORAL SOFT",
+      "country": "ITALIAN",
+      "productType": "Tile",
+      "squareMeter": "1.44",
+      "packsInBox": "4",
+      "productPrice": "300",
+      "productDimension": "60 x 60",
+      "productTexture": ""
+    },
+    
     {
       "brandName": "Beautiful Home Decor",
       "productName": "CY6Y246PA",
@@ -1712,7 +1736,6 @@
       "productPrice":"180",
       "productDimension": "34 x 34",
       "productTexture": ""
-
 
     },
     {
