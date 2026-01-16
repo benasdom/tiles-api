@@ -151,7 +151,7 @@ function updatePriceDisplay() {
 function addSpaceToList() {
 const selectedData = getCurrentSelectionData();
     
-    if (selectedData && confirm("confirm")) {
+    if (selectedData) {
         // Add to the global array
         spacesArray.push(selectedData);
         // Update the display
