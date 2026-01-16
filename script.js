@@ -130,8 +130,8 @@ function updatePriceDisplay() {
         
         // Update the labels element with tile information separated by "-"
         if (labelsElement) {
-            const labelText = `${selectedData.brandName} - ${selectedData.productName} - (${selectedData.fullDetails.productDimension}) - (${selectedData.fullDetails.squareMeter}m2) - (₵ ${selectedData.fullDetails.productPrice})`;
-            labelsElement.textContent = labelText;
+            const labelText = `<span class='br'>${selectedData.brandName}</span> - <span class='br'>${selectedData.productName}</span> - <span class='br'>(${selectedData.fullDetails.productDimension})</span> - <span class='br'>(${selectedData.fullDetails.squareMeter}m2)</span> - <span class='br'>(₵ ${selectedData.fullDetails.productPrice}</span>)`;
+            labelsElement.innerHTML = labelText;
         }
         
         // Store the complete data in a global variable

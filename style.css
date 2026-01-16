@@ -274,16 +274,27 @@
     font-weight: lighter;
     align-self: flex-end;
 }
+.br{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:30px;
+    padding:5px;
+    color:rgb(221, 77, 0);
+    background:linear-gradient(rgb(255, 243, 237) 50%,rgb(255, 204, 177));
+    border-radius:5px;
+    border:1px solid transparent;
+    box-shadow: 0px 0px 3px rgb(220, 220, 220);
+
+}
 .f-end{
     align-self: flex-end;
 }
 .labels{
     display: flex;
-    height:50px;
-    background:rgb(211, 81, 11);
     padding:10px;
     color:white;
-    border-radius: 10px;
+    gap:1px;
     width:100%;
     overflow-x: scroll;
 }
