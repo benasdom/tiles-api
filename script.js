@@ -14,7 +14,7 @@ fetch("https://benasdom.github.io/tiles-api/static.json")
         if (dataset && dataset.length > 0) {
             dataset.forEach((item) => {
                 let option = document.createElement('option');
-                option.value = item.productName;
+                // option.value = item.productName;
                 option.textContent = `${item.productName} - ${item.squareMeter} - ${item.productDimension} - ${item.brandName} - ${item.productType} - ${item.productPrice}`;
                 
                 // Store ALL data attributes
