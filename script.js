@@ -194,7 +194,7 @@ function updateSpacesListDisplay() {
             </div>
             
         </div>
-        <div class="ms-top-right" contenteditable><span class="f-end">QUOTATION</span>
+        <div class="ms-top-right" contenteditable><span class="f-end">PROFORMA</span>
         <span class="inv-id">invoice#</span>
 
             
