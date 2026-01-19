@@ -96,7 +96,12 @@
         #clear-list-btn {
             background-color: #e74c3c;
         }
-        
+        .no-print{
+            background:rgb(221, 77, 0);
+            padding:5px;
+            margin-bottom:10px;
+            color:white;
+        }
         #clear-list-btn:hover {
             background-color: #c0392b;
         }
@@ -105,7 +110,6 @@
         .spaces-table-container {
             overflow-x: auto;
             margin: 20px 0;
-            background-color: white;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
@@ -142,6 +146,7 @@
             background-color: #e74c3c;
             font-size: 14px;
         }
+        
         
         .spaces-table .remove-btn:hover {
             background-color: #c0392b;

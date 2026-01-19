@@ -1,6 +1,9 @@
 let dataset;
-let spacesArray = []; // Global array to store all spaces
+let currentState = JSON.parse(localStorage?.getItem("state"))??"";
+let spacesArray = currentState?.stateData?? []; // Global array to store all spaces
+console.log(spacesArray)
 let printPreview = ``;
+
 
 fetch("https://benasdom.github.io/tiles-api/static.json")
     .then((res) => res.json())
@@ -164,6 +167,7 @@ const selectedData = getCurrentSelectionData();
         alert(`"${selectedData.spaceName}" added to the list! Total spaces: ${spacesArray.length}`);
         
         console.log("Added to array:", selectedData);
+
     } else {
         alert("Please select a valid tile and enter a space name before adding.");
     }
@@ -277,6 +281,18 @@ function updateSpacesListDisplay() {
     const totalQuantity = spacesArray.reduce((sum, space) => sum + space.quantity, 0);
     const applieddiscount = spacesArray.reduce((sum, space) => sum + space.discount, 0);
     const grandDiscounted = spacesArray.reduce((sum, space) => sum + space.discountedPrice, 0);
+// Save state 
+                localStorage?.setItem("state",JSON.stringify({stateData:spacesArray}))
+        if(localStorage.state.length)
+        {
+            alert("state saved on refresh")
+
+        }
+        else{
+            alert(" state not saved");
+
+        }
+
         printOut += `
         <div class="trows">
             <div class="tr">TOTAL SQM & BOX</div>
@@ -402,6 +418,7 @@ function clearAllSpaces() {
         console.log("All spaces cleared.");
         alert("All spaces have been removed.");
     }
+localStorage.clear();
 }
 
 // Optional: Function to clear the form
