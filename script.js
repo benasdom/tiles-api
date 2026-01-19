@@ -262,7 +262,7 @@ function updateSpacesListDisplay() {
             <span class="col qty">${space.fullDetails.productTexture}</span>
             <span class="col qty">${space.squareMeter} m²</span>
             <span class="col boxes">${space.boxes} boxes</span>
-            <span class="col qty ">${space.quantity} m²</span>
+            <span class="col qty ">${space.quantity.toFixed(2)} m²</span>
             <span class="col total">₵${space.totalPrice.toFixed(2)}</span>
             <span class="col discounted">₵${space.discountedPrice.toFixed(2)}</span>
             <button onclick="removeSpace(${index})" class="remove-btn">Remove</button>
