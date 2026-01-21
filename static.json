@@ -1562,7 +1562,7 @@
       "country": "ITALIAN",
       "productType": "Tile",
       "squareMeter": "1.46",
-      "packsInBox": "5",
+      "packsInBox": "4",
       "productPrice": "300",
       "productDimension": "60.4 X 60.4",
       "productTexture": ""
@@ -1734,6 +1734,30 @@
       "productDimension": "60 x 60",
       "productTexture": ""
     },
+    {
+      "brandName": "Beautiful Home Decor",
+      "productName": "EVOKE TALCO",
+      "country": "ITALIAN",
+      "productType": "Tile",
+      "squareMeter": "1.44",
+      "packsInBox": "4",
+      "productPrice": "380",
+      "productDimension": "60 x 120",
+      "productTexture": ""
+    },
+    
+    {
+      "brandName": "Beautiful Home Decor",
+      "productName": "FORT NAT ROC",
+      "country": "ITALIAN",
+      "productType": "Tile",
+      "squareMeter": "1.26",
+      "packsInBox": "7",
+      "productPrice": "300",
+      "productDimension": "30 x 60",
+      "productTexture": ""
+    },
+    
     {
       "brandName": "Beautiful Home Decor",
       "productName": "G81166",
@@ -2053,6 +2077,30 @@
       "productPrice": "300",
       "productDimension": "61 x 61",
       "productTexture": ""
+    },
+    {
+      "brandName": "Beautiful Home Decor",
+      "productName":"MARM2 CREMA AVORIO",
+      "country": "",
+      "productType": "Tile",
+      "squareMeter": "1.08",
+      "packsInBox": "6",
+      "productPrice": "300",
+      "productDimension": "30 x 60",
+      "productTexture": ""
+
+    },
+    {
+      "brandName": "Beautiful Home Decor",
+      "productName":"MARM2 CREMA AVORIO",
+      "country": "",
+      "productType": "Tile",
+      "squareMeter": "1.01",
+      "packsInBox": "2",
+      "productPrice": "300",
+      "productDimension": "74 x 74",
+      "productTexture": ""
+
     },
     {
       "brandName": "Beautiful Home Decor",
@@ -2429,6 +2477,18 @@
       "productTexture": ""
     },
     {
+            "brandName": "Beautiful Home Decor",
+      "productName":"PIETRASANTA MAT RET",
+      "country":"",
+      "productType":"TILE",
+      "squareMeter":"1.08",
+      "packsInBox":"3",
+      "productPrice":"330",
+      "productDimension":"30 X 120",
+      "productTexture":""
+
+    },
+    {
       "brandName": "Beautiful Home Decor",
       "productName": "PIETRAVIVA LIGHT BEIGE",
       "country": "ITALIAN",
@@ -2625,6 +2685,18 @@
       "productPrice": "290",
       "productDimension": "30 x 60",
       "productTexture": ""
+    },
+    {
+      "brandName": "Beautiful Home Decor",
+      "productName": "SKIN MILK",
+      "country": "",
+      "productType": "Tile",
+      "squareMeter": "0.98",
+      "packsInBox": "3",
+      "productPrice": "320",
+      "productDimension": "41 X 82",
+      "productTexture": ""
+
     },
     {
       "brandName": "Beautiful Home Decor",
@@ -2911,6 +2983,18 @@
       "packsInBox": "2",
       "productPrice": "310",
       "productDimension": "60 x 120",
+      "productTexture": ""
+    },
+    {
+      
+      "brandName": "Beautiful Home Decor",
+      "productName": "VIAREGIO RET",
+      "country": "ITALIAN",
+      "productType": "Tile",
+      "squareMeter": "1.26",
+      "packsInBox": "7",
+      "productPrice": "320",
+      "productDimension": "30 x 60",
       "productTexture": ""
     },
     {
