@@ -1598,7 +1598,7 @@
       "productType": "Tile",
       "squareMeter": "1.216",
       "packsInBox": "5",
-      "productPrice": "320",
+      "productPrice": "300",
       "productDimension": "20.13 x 120.8",
       "productTexture": ""
     },
@@ -2574,7 +2574,7 @@
       "productType": "Tile",
       "squareMeter": "1.08",
       "packsInBox": "6",
-      "productPrice": "290",
+      "productPrice": "320",
       "productDimension": "30 x 60",
       "productTexture": ""
     },
@@ -2596,7 +2596,7 @@
       "productType": "Tile",
       "squareMeter": "1.08",
       "packsInBox": "6",
-      "productPrice": "290",
+      "productPrice": "320",
       "productDimension": "30 x 60",
       "productTexture": ""
     },
