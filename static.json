@@ -1814,6 +1814,32 @@
       "productDimension": "30 x 60",
       "productTexture": ""
     },
+    ,
+    
+    {
+      "brandName": "Beautiful Home Decor",
+      "productName": "FORT NAT ROC",
+      "country": "ITALIAN",
+      "productType": "Tile",
+      "squareMeter": "1.26",
+      "packsInBox": "7",
+      "productPrice": "300",
+      "productDimension": "30 x 60",
+      "productTexture": ""
+    },
+    
+    
+    {
+      "brandName": "Beautiful Home Decor",
+      "productName": "FIOR DI PESCO",
+      "country": "ITALIAN",
+      "productType": "Tile",
+      "squareMeter": "1.62",
+      "packsInBox": "3",
+      "productPrice": "0",
+      "productDimension": "60 X 90",
+      "productTexture": ""
+    },
     
     {
       "brandName": "Beautiful Home Decor",
@@ -2602,6 +2628,17 @@
     },
     {
       "brandName": "Beautiful Home Decor",
+      "productName": "RED TRAVENTINO",
+      "country": "ITALIAN",
+      "productType": "Tile",
+      "squareMeter": "1.62",
+      "packsInBox": "3",
+      "productPrice": "0",
+      "productDimension": "60 X 90",
+      "productTexture": ""
+    },
+    {
+      "brandName": "Beautiful Home Decor",
       "productName": "REVERSO GRIGIO",
       "country": "ITALIAN",
       "productType": "Tile",
@@ -3064,6 +3101,18 @@
       "packsInBox": "7",
       "productPrice": "290",
       "productDimension": "30 x 60",
+      "productTexture": ""
+    },
+    {
+      
+      "brandName": "Beautiful Home Decor",
+      "productName": "VOLAKAS NATURAL",
+      "country": "ITALIAN",
+      "productType": "Tile",
+      "squareMeter": "1.44",
+      "packsInBox": "4",
+      "productPrice": "0",
+      "productDimension": "60 x 60",
       "productTexture": ""
     },
     {
