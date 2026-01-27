@@ -133,9 +133,13 @@ function updatePriceDisplay() {
         
         // Update the labels element with tile information separated by "-"
         if (labelsElement) {
-            const labelText = `
+let pic = (selectedData?.fullDetails?.productImages?.length > 0) 
+          ? selectedData.fullDetails.productImages[0] 
+          : "";
+                      const labelText = `
             <span class='br'>${selectedData.brandName}</span> - <span class='br'>${selectedData.productName}</span> - <span class='br'>(${selectedData.fullDetails.productDimension})</span> - <span class='br'>(${selectedData.fullDetails.squareMeter}m2)</span> - <span class='br'>(₵ ${selectedData.fullDetails.productPrice}</span>)
-            <span><img src='${selectedData.productImages[0]}' class='imgshow'/></span>
+            <span><a class='link' href='${!/http/.test(pic)?'https://benasdom.github.io/tiles-api'+pic:pic}' target='_blank'>
+            <img src='${!/http/.test(pic)?'https://benasdom.github.io/tiles-api'+pic:pic}' class='imgshow' /></a></span>
             `;
             labelsElement.innerHTML = labelText;
         }

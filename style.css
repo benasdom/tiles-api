@@ -39,6 +39,7 @@
             display: block;
             margin-bottom: 8px;
             font-weight: bold;
+            margin-bottom:50px;
             color: #555;
         }
         
@@ -279,10 +280,22 @@
     font-weight: lighter;
     align-self: flex-end;
 }
+.imgshow:hover{
+    position:absolute;
+    margin:auto;
+    border-radius: 0px;
+    width:200px;
+    height:400px;
+    transition: all .2s ease-in;
+
+}
+
 .imgshow{
+    
     width:100px;
-    height:200px;
+    height:100px;
     margin:10px;
+    border-radius: 15px;
 }
 .br{
     display: flex;
@@ -306,6 +319,7 @@
     color:white;
     gap:1px;
     width:100%;
+    align-items: space-around;
     overflow-x: scroll;
 }
 .a{

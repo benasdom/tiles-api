@@ -1523,7 +1523,8 @@
       "packsInBox": "6",
       "productPrice": "290",
       "productDimension": "20 x 90.6",
-      "productTexture": ""
+      "productTexture": "",
+      "productImages":["https://i.pinimg.com/736x/4c/bd/82/4cbd8254089c9faa1a6d0b39798a7e53.jpg"]
     },
     {
       "brandName": "Beautiful Home Decor",
@@ -1691,7 +1692,8 @@
       "packsInBox": "6",
       "productPrice": "320",
       "productDimension": "22.5 x 90",
-      "productTexture": ""
+      "productTexture": "",
+      "productImages":["https://i.pinimg.com/1200x/d3/7a/1e/d37a1e874e9ba2b3a9731360c065752b.jpg"]
     },
     {
       "brandName": "Beautiful Home Decor",
@@ -1801,18 +1803,6 @@
       "packsInBox": "4",
       "productPrice": "380",
       "productDimension": "60 x 120",
-      "productTexture": ""
-    },
-    
-    {
-      "brandName": "Beautiful Home Decor",
-      "productName": "FORT NAT ROC",
-      "country": "ITALIAN",
-      "productType": "Tile",
-      "squareMeter": "1.26",
-      "packsInBox": "7",
-      "productPrice": "300",
-      "productDimension": "30 x 60",
       "productTexture": ""
     },
     {
@@ -3023,7 +3013,8 @@
       "packsInBox": "4",
       "productPrice": "320",
       "productDimension": "20 x 120",
-      "productTexture": ""
+      "productTexture": "",
+      "productImages":["https://i.pinimg.com/1200x/3e/fe/09/3efe099dae0c0aa9d6495c344287181c.jpg"]
     },
     {
       "brandName": "Beautiful Home Decor",
