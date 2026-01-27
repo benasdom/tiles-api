@@ -21,7 +21,7 @@
     "packsInBox":"2pcs",
     "productPrice": "223.50",
     "productDimension": "60 X 120",
-    "productImages": [
+    "productImages": ["https://i.pinimg.com/736x/65/6c/76/656c76430ae50e1520203d2681441894.jpg",
       "/tiles/m2.jpg"
     ],
     "productTexture": "polished"
@@ -1644,7 +1644,8 @@
       "packsInBox": "4",
       "productPrice": "270",
       "productDimension": "60 x 60",
-      "productTexture": ""
+      "productTexture": "",
+      "productImages":["https://i.pinimg.com/1200x/86/27/e3/8627e30fa5983fb828d11f1ea994c23a.jpg"]
     },
     {
       "brandName": "Beautiful Home Decor",
@@ -2014,7 +2015,8 @@
       "packsInBox": "7",
       "productPrice": "320",
       "productDimension": "20 x 90",
-      "productTexture": ""
+      "productTexture": "",
+      "productImages":["https://i.pinimg.com/1200x/18/c5/0a/18c50afc76d78c6a9f24b78bf713afc1.jpg"]
     },
     {
       "brandName": "Beautiful Home Decor",
@@ -2931,6 +2933,7 @@
       "packsInBox": "3",
       "productPrice": "270",
       "productDimension": "60 x 120",
+      "productImages":["https://i.pinimg.com/736x/bc/db/91/bcdb91eae91a2955aeb5c3ceefca0ede.jpg"],
       "productTexture": ""
     },
     
