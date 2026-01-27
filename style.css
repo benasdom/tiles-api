@@ -279,6 +279,11 @@
     font-weight: lighter;
     align-self: flex-end;
 }
+.imgshow{
+    width:100px;
+    height:200px;
+    margin:10px;
+}
 .br{
     display: flex;
     justify-content: center;
