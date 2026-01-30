@@ -1592,6 +1592,19 @@
       "productDimension": "60 x 60",
       "productTexture": ""
     },
+    
+    {
+      "brandName": "Beautiful Home Decor",
+      "productName": "COLOURS TOBACCO",
+      "country": "SPANISH",
+      "productType": "Tile",
+      "squareMeter": "1.5",
+      "packsInBox": "12",
+      "productPrice": "NULL",
+      "productDimension": "25 x 50",
+      "productTexture": ""
+    },
+    
     {
       "brandName": "Beautiful Home Decor",
       "productName": "CONCRETE IVORY",
@@ -1623,6 +1636,17 @@
       "packsInBox": "3",
       "productPrice": "350",
       "productDimension": "45.7 x 90.8",
+      "productTexture": ""
+    },
+    {
+      "brandName": "Beautiful Home Decor",
+      "productName": "COSMOS GRAFITE",
+      "country": "ITALIAN",
+      "productType": "Tile",
+      "squareMeter": "1.215",
+      "packsInBox": "3",
+      "productPrice": "NULL",
+      "productDimension": "45 x 90",
       "productTexture": ""
     },
     {
@@ -1704,6 +1728,17 @@
       "packsInBox": "8",
       "productPrice": "270",
       "productDimension": "31. x 61.5",
+      "productTexture": ""
+    },
+    {
+      "brandName": "Beautiful Home Decor",
+      "productName": "DOGGY CENERE",
+      "country": "ITALIAN",
+      "productType": "Tile",
+      "squareMeter": "1.49",
+      "packsInBox": "3",
+      "productPrice": "NULL",
+      "productDimension": "70.4 X 70.4",
       "productTexture": ""
     },
     {
@@ -1954,7 +1989,7 @@
     },
     {
       "brandName": "Beautiful Home Decor",
-      "productName": "I COCCI GRAFITE",
+      "productName": "I COCCI GRAFITE (ICOCCI GRAFITE)",
       "country": "ITALIAN",
       "productType": "Tile",
       "squareMeter": "1.08",
@@ -1965,7 +2000,17 @@
     },
     {
       "brandName": "Beautiful Home Decor",
-      "productName": "ICOCCI DECO",
+      "productName": "ICOCCI CEMENTO ITALIAN (I COCCI CEMENTO ITALIAN)",
+      "country": "ITALIAN",
+      "productType": "Tile",
+      "squareMeter": "1.44",
+      "packsInBox": "4",
+      "productPrice": "NULL",
+      "productDimension": "60 x 60",
+      "productTexture": ""
+    },{
+      "brandName": "Beautiful Home Decor",
+      "productName": "ICOCCI DECO (I COCCI DECO)",
       "country": "ITALIAN",
       "productType": "Tile",
       "squareMeter": "1.08",
