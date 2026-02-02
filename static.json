@@ -1174,6 +1174,17 @@
     },
     {
       "brandName": "Beautiful Home Decor",
+      "productName": "AZUL BAHIA",
+      "country": "ITALIAN",
+      "productType": "Tile",
+      "squareMeter": "1.62",
+      "packsInBox": "3",
+      "productPrice": "NULL",
+      "productDimension": "60 x 90",
+      "productTexture": ""
+    },
+    {
+      "brandName": "Beautiful Home Decor",
       "productName": "ALPI MIELE GRIP",
       "country": "ITALIAN",
       "productType": "Tile",
@@ -1900,6 +1911,17 @@
     },
     {
       "brandName": "Beautiful Home Decor",
+      "productName": "GOLDEN BIEGE POLISHED (60 by 90)",
+      "country": "GANI",
+      "productType": "Tile",
+      "squareMeter": "1.62",
+      "packsInBox": "2",
+      "productPrice": "",
+      "productDimension": "90 x 90",
+      "productTexture": ""
+    },
+    {
+      "brandName": "Beautiful Home Decor",
       "productName": "GOLDEN STONE GREY",
       "country": "ITALIAN",
       "productType": "Tile",
@@ -2394,6 +2416,17 @@
       "packsInBox": "6",
       "productPrice": "300",
       "productDimension": "20 x 90",
+      "productTexture": ""
+    },
+    {
+      "brandName": "Beautiful Home Decor",
+      "productName": "NOUVA BEIGE",
+      "country": "",
+      "productType": "Tile",
+      "squareMeter": "1.44",
+      "packsInBox": "4",
+      "productPrice": "",
+      "productDimension": "60 x 60",
       "productTexture": ""
     },
     {
@@ -2928,6 +2961,28 @@
     },
     {
       "brandName": "Beautiful Home Decor",
+      "productName": "STATUARIO WHITE POLISHED",
+      "country": "ITALIAN",
+      "productType": "Tile",
+      "squareMeter": "1.44",
+      "packsInBox": "4",
+      "productPrice": "NULL",
+      "productDimension": "60 x 60",
+      "productTexture": ""
+    },
+    {
+      "brandName": "Beautiful Home Decor",
+      "productName": "STATUARIO WHITE MAT",
+      "country": "ITALIAN",
+      "productType": "Tile",
+      "squareMeter": "1.44",
+      "packsInBox": "4",
+      "productPrice": "NULL",
+      "productDimension": "60 x 60",
+      "productTexture": ""
+    },
+    {
+      "brandName": "Beautiful Home Decor",
       "productName": "STONE COLLECTION",
       "country": "ITALIAN",
       "productType": "Tile",
@@ -2972,6 +3027,17 @@
       "productTexture": ""
     },
     
+    {
+      "brandName": "Beautiful Home Decor",
+      "productName": "TD692744 BS",
+      "country": "ITALIAN",
+      "productType": "Tile",
+      "squareMeter": "1.62",
+      "packsInBox": "3",
+      "productPrice": "NULL",
+      "productDimension": "60 x 90",
+      "productTexture": ""
+    },
     {
       "brandName":"Beautiful Home Decor",
       "productName":"TEVERE BEIGE (PROMO)",
