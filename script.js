@@ -23,7 +23,7 @@ fetch("https://benasdom.github.io/tiles-api/static.json")
                 // Store ALL data attributes
                 option.dataset.brand = item.brandName;
                 option.dataset.type = item.productType;
-                option.dataset.price = item.productPrice;
+                option.dataset.price = (parseInt(item.productPrice) * 1.152) +"";
                 option.dataset.squareMeter = item.squareMeter;
                 option.dataset.dimension = item.productDimension;
                 option.dataset.productName = item.productName;
