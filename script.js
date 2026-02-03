@@ -207,8 +207,8 @@ function updateSpacesListDisplay() {
             </div>
             
         </div>
-        <div class="ms-top-right" contenteditable><span class="f-end">PROFORMA</span>
-        <span class="inv-id">invoice#</span>
+        <div class="ms-top-right" ><span class="f-end"contenteditable>PROFORMA</span>
+        <span class="inv-id"contenteditable>invoice#</span>
 
             
         </div>
