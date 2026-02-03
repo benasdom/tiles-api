@@ -9,7 +9,8 @@ fetch("https://benasdom.github.io/tiles-api/static.json")
     .then((res) => res.json())
     .then(res => {
         let data = [...res.data,...res.bhd];
-        dataset = data;
+        dataset = data.map(a=>({...a,productPrice:(parseInt(a.productPrice)*1.152)+""}));
+
         let mydatalist = document.querySelector("datalist");
         
         // Clear existing options
@@ -23,7 +24,7 @@ fetch("https://benasdom.github.io/tiles-api/static.json")
                 // Store ALL data attributes
                 option.dataset.brand = item.brandName;
                 option.dataset.type = item.productType;
-                option.dataset.price = (parseInt(item.productPrice) * 1.152) +"";
+                option.dataset.price = item.productPrice;
                 option.dataset.squareMeter = item.squareMeter;
                 option.dataset.dimension = item.productDimension;
                 option.dataset.productName = item.productName;
