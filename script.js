@@ -10,7 +10,7 @@ fetch("https://benasdom.github.io/tiles-api/static.json")
     .then(res => {
         let data = [...res.data,...res.bhd];
         // (-4% decrement and + 20% increment === 1.153)
-        dataset = data.map(a=>({...a,productPrice:(parseInt(a.productPrice)*1.15384615).toFixed(3)}));
+        dataset = data.map(a=>({...a,productPrice:(parseInt(a.productPrice)*1.15384615).toFixed(2)}));
 
         let mydatalist = document.querySelector("datalist");
         
@@ -259,7 +259,7 @@ function updateSpacesListDisplay() {
     printOut+=`
       <div class="trows">
             <div class="tr">${space.productName}</div>
-<div class="tr">${space.spaceName}</div>
+<div class="tr" contenteditable>${space.spaceName}</div>
 <div class="tr">${space.fullDetails.productDimension}</div>
 <div class="tr reduce">${space.squareMeter} m²</div>
 <div class="tr reduce">${space.boxes} bxs</div>
@@ -301,7 +301,7 @@ function updateSpacesListDisplay() {
             alert(" state not saved");
 
         }
-
+let taxes= (grandDiscounted*0.2) ;
         printOut += `
         <div class="trows">
             <div class="tr">TOTAL SQM & BOX</div>
@@ -332,6 +332,37 @@ function updateSpacesListDisplay() {
             <div class="tr hide"></div>
             <div class="tr alignleft">DISCOUNT</div>
             <div class="tr alignright">${applieddiscount.toFixed(2)}</div>
+        </div>
+        <div class="trows">
+            <div class="tr hide"></div>
+            <div class="tr hide"></div>
+            <div class="tr hide"></div>
+            <div class="tr reduce hide"></div>
+            <div class="tr reduce hide"></div>
+            <div class="tr hide"></div>
+            <div class="tr alignleft">PRE-TAX TOTAL </div>
+            <div class="tr alignright">${(grandDiscounted-taxes).toFixed(2)}</div>
+        </div>
+        
+        <div class="trows">
+            <div class="tr hide"></div>
+            <div class="tr hide"></div>
+            <div class="tr hide"></div>
+            <div class="tr reduce hide"></div>
+            <div class="tr reduce hide"></div>
+            <div class="tr hide"></div>
+            <div class="tr alignleft petit">
+            <p>NHIS (2.5%)</p>
+            <p>GETFUND (2.5%)</p>
+            <p>VAT (15%)</p>
+            <p>TAX SUM</p>
+             </div>
+            <div class="tr alignright petit2">
+        <p> ${((0.025) * grandDiscounted).toFixed(2)}</p>
+        <p> ${((0.025) * grandDiscounted).toFixed(2)}</p>
+        <p> ${((0.15) * grandDiscounted).toFixed(2)}</p>
+        <p>  ${taxes.toFixed(2)}</p>
+            </div>
         </div>
         <div class="trows">
             <div class="tr hide"></div>

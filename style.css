@@ -52,7 +52,26 @@
             border-radius: 5px;
             font-size: 16px;
         }
-        
+     
+        .petit p:last-child,.petit2 p:last-child{
+            border-bottom:1px dashed transparent !important;
+
+        }
+        .petit2 p{
+            text-align: right;
+        }
+        .petit p,.petit2 p{
+            width:100%;
+            padding-top: 2px;
+            font-size:9px;
+            border-bottom:1px dashed rgb(69, 69, 69)  !important;
+        }
+        .petit,.petit2{
+        display: flex !important;
+        flex-direction: column;
+        text-align: left;
+        }
+      
         #price-output {
             font-size: 20px;
             font-weight: bold;
