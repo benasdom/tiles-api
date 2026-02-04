@@ -1339,6 +1339,17 @@
     },
     {
       "brandName": "Beautiful Home Decor",
+      "productName": "BEAUTY GREY",
+      "country": "",
+      "productType": "Tile",
+      "squareMeter": "1.6",
+      "packsInBox": "20",
+      "productPrice": "NULL",
+      "productDimension": "20 x 40",
+      "productTexture": ""
+    },
+    {
+      "brandName": "Beautiful Home Decor",
       "productName": "BLEND CONCRETE OLIVA",
       "country": "ITALIAN",
       "productType": "Tile",
@@ -1765,6 +1776,17 @@
     },
     {
       "brandName": "Beautiful Home Decor",
+      "productName": "ELECTRO ANTACITE",
+      "country": "",
+      "productType": "Tile",
+      "squareMeter": "1.5",
+      "packsInBox": "18",
+      "productPrice": "NULL",
+      "productDimension": "25 x 33",
+      "productTexture": ""
+    },
+    {
+      "brandName": "Beautiful Home Decor",
       "productName": "E.C MARFIL",
       "country": "ITALIAN",
       "productType": "Tile",
@@ -2183,6 +2205,17 @@
       "packsInBox": "2",
       "productPrice": "380",
       "productDimension": "60 x 120",
+      "productTexture": ""
+    },
+    {
+      "brandName": "Beautiful Home Decor",
+      "productName": "MAGNETIC GRIS",
+      "country": "",
+      "productType": "Tile",
+      "squareMeter": "1.5",
+      "packsInBox": "18",
+      "productPrice": "NULL",
+      "productDimension": "25 x 33",
       "productTexture": ""
     },
     {
@@ -3226,6 +3259,29 @@
       "packsInBox": "7",
       "productPrice": "290",
       "productDimension": "29.7 x 59.7",
+      "productTexture": ""
+    },
+    {
+      "brandName": "Beautiful Home Decor",
+      "productName": "WAIKIKI BLACK",
+      "country": "",
+      "productType": "Tile",
+      "squareMeter": "1.5",
+      "packsInBox": "18",
+      "productPrice": "NULL",
+      "productDimension": "25 x 33",
+      "productTexture": ""
+    },
+    
+    {
+      "brandName": "Beautiful Home Decor",
+      "productName": "WAIKIKI BROWN",
+      "country": "",
+      "productType": "Tile",
+      "squareMeter": "1.5",
+      "packsInBox": "18",
+      "productPrice": "NULL",
+      "productDimension": "25 x 33",
       "productTexture": ""
     },
     {
