@@ -355,13 +355,11 @@ let taxes= (grandDiscounted*0.2) ;
             <p>NHIS (2.5%)</p>
             <p>GETFUND (2.5%)</p>
             <p>VAT (15%)</p>
-            <p>TAX SUM</p>
              </div>
             <div class="tr alignright petit2">
         <p> ${((0.025) * grandDiscounted).toFixed(2)}</p>
         <p> ${((0.025) * grandDiscounted).toFixed(2)}</p>
         <p> ${((0.15) * grandDiscounted).toFixed(2)}</p>
-        <p>  ${taxes.toFixed(2)}</p>
             </div>
         </div>
         <div class="trows">
