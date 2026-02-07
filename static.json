@@ -1156,7 +1156,22 @@
     ],
     
     "productTexture": "polished"
-  }
+  },
+  
+  {
+    "brandName": "micasso",
+    "productName": "MCP36002",
+    "productType": "tile",
+    "squareMeter": "1.44",
+    "packsInBox":"8pcs",
+    "productPrice": "149.00",
+    "productDimension": "30 x 60",
+    "productImages": [
+      "/tiles/m85.jpg"
+    ],
+    
+    "productTexture": "polished"
+  },
 ],
 
   "bhd": [

@@ -10,8 +10,8 @@ fetch("https://benasdom.github.io/tiles-api/static.json")
     .then(res => {
         let data = [...res.data,...res.bhd];
         // (-4% decrement and + 20% increment === 1.153)
-        dataset = data.map(a=>(/micasso/gim.test(a.brandName)?a:{...a,productPrice:(parseInt(a.productPrice)*1.15384615).toFixed(2)}));
-
+        // dataset = data.map(a=>(/micasso/gim.test(a.brandName)?a:{...a,productPrice:(parseInt(a.productPrice)*1.15384615).toFixed(2)}));
+dataset=data;
         let mydatalist = document.querySelector("datalist");
         
         // Clear existing options
