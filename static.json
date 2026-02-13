@@ -1400,7 +1400,7 @@
       "productType": "Tile",
       "squareMeter": "1.6",
       "packsInBox": "20",
-      "productPrice": "NULL",
+      "productPrice": "150",
       "productDimension": "20 x 40",
       "productTexture": ""
     },
@@ -2259,7 +2259,7 @@
       "productType": "Tile",
       "squareMeter": "1.44",
       "packsInBox": "2",
-      "productPrice": "380",
+      "productPrice": "400",
       "productDimension": "60 x 120",
       "productTexture": ""
     },
