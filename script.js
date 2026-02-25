@@ -48,6 +48,7 @@ function calculateTotalWithData(selectedOption, quantity = 1, spaceName = '',dis
     // Get values from dataset
     const squareMeter = parseFloat(selectedOption.dataset.squareMeter);
     const pricePerUnit = parseFloat(selectedOption.dataset.price);
+    const brandName = selectedOption.dataset.brand;
     const quantityNum = parseInt(quantity) || 1;
     
     // Calculate total
@@ -56,7 +57,8 @@ function calculateTotalWithData(selectedOption, quantity = 1, spaceName = '',dis
     let discount = 0;
     if (!isNaN(squareMeter) && !isNaN(pricePerUnit)) {
         let boxes = Math.ceil((quantityNum / squareMeter));
-        totalPrice = boxes * squareMeter * pricePerUnit;
+        VatInclusiveTotal= (boxes * squareMeter * pricePerUnit)
+        totalPrice = /micasso/i.test(brandName)?VatInclusiveTotal:VatInclusiveTotal / 1.2;
         discount = (discountAmount/100) * totalPrice;
         discounted = totalPrice - discount;
         estimatedQuantity = boxes * squareMeter;
@@ -294,7 +296,7 @@ function updateSpacesListDisplay() {
                 localStorage?.setItem("state",JSON.stringify({stateData:spacesArray}))
         if(localStorage.state.length)
         {
-            alert("state saved on refresh")
+            // alert("state saved on refresh")
 
         }
         else{
@@ -341,7 +343,7 @@ let taxes= (grandDiscounted*0.2) ;
             <div class="tr reduce hide"></div>
             <div class="tr hide"></div>
             <div class="tr alignleft">PRE-TAX TOTAL </div>
-            <div class="tr alignright">${(grandDiscounted-taxes).toFixed(2)}</div>
+            <div class="tr alignright">${(grandDiscounted).toFixed(2)}</div>
         </div>
         
         <div class="trows">
@@ -370,7 +372,7 @@ let taxes= (grandDiscounted*0.2) ;
             <div class="tr reduce hide"></div>
             <div class="tr hide"></div>
             <div class="tr alignleft">GRANDTOTAL</div>
-            <div class="tr alignright">${grandDiscounted.toFixed(2)}</div>
+            <div class="tr alignright">${(grandDiscounted + taxes).toFixed(2)}</div>
         </div>
     </div>
 <div class="preped">PREPARED BY: BEAUTIFUL HOME DECOR</div>
