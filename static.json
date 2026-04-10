@@ -2005,7 +2005,7 @@
       "productType": "Tile",
       "squareMeter": "1.62",
       "packsInBox": "2",
-      "productPrice": "",
+      "productPrice": "310",
       "productDimension": "90 x 90",
       "productTexture": ""
     },
@@ -3230,6 +3230,17 @@
     {
       "brandName": "Beautiful Home Decor",
       "productName": "TTD5612036",
+      "country": "GANI",
+      "productType": "Tile",
+      "squareMeter": "1.44",
+      "packsInBox": "2",
+      "productPrice": "310",
+      "productDimension": "60 x 120",
+      "productTexture": ""
+    },
+    {
+      "brandName": "Beautiful Home Decor",
+      "productName": "TTS612036",
       "country": "GANI",
       "productType": "Tile",
       "squareMeter": "1.44",
