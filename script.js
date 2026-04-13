@@ -188,7 +188,6 @@ const selectedData = getCurrentSelectionData();
 function updateSpacesListDisplay() {
     const listContainer = document.getElementById('spaces-list');
     if (!listContainer) return;
-    
     if (spacesArray.length === 0) {
         listContainer.innerHTML = '<p>No spaces added yet.</p>';
         return;
@@ -513,10 +512,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (clearListBtn) {
         clearListBtn.addEventListener('click', clearAllSpaces);
     }
-    
-    // Initialize the display
     updateSpacesListDisplay();
 });
-
-// Make functions available globally for onclick attributes
 window.removeSpace = removeSpace;
