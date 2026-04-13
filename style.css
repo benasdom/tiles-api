@@ -483,6 +483,9 @@ margin-top:50px;
     border-bottom: 1px solid transparent !important;
     border-left: 1px solid transparent !important;
 }
+.hideleft{
+    border-left: 1px solid transparent !important;
+}
    .logo1{
         border-radius: 50%;
         width:100px;
