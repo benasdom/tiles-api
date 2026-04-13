@@ -1230,18 +1230,6 @@
     },
     {
       "brandName": "Beautiful Home Decor",
-      "productName": "pen",
-      "country": "",
-      "productType": "tile",
-      "squareMeter": "10",
-      "packsInBox": "20",
-      "productPrice": "10",
-      "productDimension": "10 x 30",
-      "productTexture": " jagged"
-
-    },
-    {
-      "brandName": "Beautiful Home Decor",
       "productName": "AZUL BAHIA",
       "country": "ITALIAN",
       "productType": "Tile",
@@ -3442,5 +3430,4 @@
       "productTexture": ""
     }
   ]
-
 }
