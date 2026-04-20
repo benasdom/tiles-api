@@ -360,8 +360,8 @@
     flex-direction: row;
     width:100%;
     margin-bottom:50px;
-
 }
+
 .alignright{
     display: flex;
     justify-content: right !important;
@@ -507,6 +507,24 @@ margin-top:50px;
         border-bottom: 1px solid black;
 
 }
+.trj{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:calc(150px * 3);
+    text-align: left;
+    padding:2px;
+    padding-top:5px;
+        padding-bottom:5px;
+    min-height: 100%;
+    font-size: 11px;
+    white-space: wrap;
+        border-left:1px solid black;
+        border-bottom: 1px solid black;
+
+}
+
 .reduce{
     width:100px !important;
 }

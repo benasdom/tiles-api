@@ -1261,6 +1261,7 @@
       "productDimension": "22.5 x 90",
       "productTexture": ""
     },
+    
     {
       "brandName": "Beautiful Home Decor",
       "productName": "AMANI GREY",
@@ -1269,6 +1270,17 @@
       "squareMeter": "1.44",
       "packsInBox": "4",
       "productPrice": "300",
+      "productDimension": "60 x 60",
+      "productTexture": ""
+    },
+    {
+      "brandName": "Beautiful Home Decor",
+      "productName": "AMISYA BEIGE ANTIQUE",
+      "country": "GANI",
+      "productType": "Tile",
+      "squareMeter": "1.44",
+      "packsInBox": "4",
+      "productPrice": "290",
       "productDimension": "60 x 60",
       "productTexture": ""
     },
@@ -2329,6 +2341,32 @@
       "productDimension": "61 x 61",
       "productTexture": ""
     },
+    
+    {
+      "brandName": "Beautiful Home Decor",
+      "productName":"MARFIL ORO ANTIQUE",
+      "country": "",
+      "productType": "Tile",
+      "squareMeter": "1.44",
+      "packsInBox": "4",
+      "productPrice": "290",
+      "productDimension": "60 x 60",
+      "productTexture": ""
+
+    },
+    {
+      "brandName": "Beautiful Home Decor",
+      "productName":"MARFIL ORO HONED",
+      "country": "",
+      "productType": "Tile",
+      "squareMeter": "1.62",
+      "packsInBox": "6",
+      "productPrice": "310",
+      "productDimension": "60 x 90",
+      "productTexture": ""
+
+    },
+    
     {
       "brandName": "Beautiful Home Decor",
       "productName":"MARM2 CREMA AVORIO",
@@ -2361,6 +2399,18 @@
       "squareMeter": "1.44",
       "packsInBox": "4",
       "productPrice": "350",
+      "productDimension": "60 x 60",
+      "productTexture": ""
+    },
+    
+    {
+      "brandName": "Beautiful Home Decor",
+      "productName": "MARRON EMPERADOR HONED",
+      "country": "",
+      "productType": "Tile",
+      "squareMeter": "1.44",
+      "packsInBox": "4",
+      "productPrice": "280",
       "productDimension": "60 x 60",
       "productTexture": ""
     },
@@ -3016,6 +3066,18 @@
       "productDimension": "30 x 60",
       "productTexture": ""
     },
+    
+    {
+      "brandName": "Beautiful Home Decor",
+      "productName": "SOFT MARFIL POLISHED",
+      "country": "ITALIAN",
+      "productType": "Tile",
+      "squareMeter": "1.44",
+      "packsInBox": "4",
+      "productPrice": "280",
+      "productDimension": "60 x 60",
+      "productTexture": ""
+    },
     {
       "brandName": "Beautiful Home Decor",
       "productName": "SQ. SEA GREEN",
@@ -3240,7 +3302,7 @@
     },
     {
       "brandName": "Beautiful Home Decor",
-      "productName": "TTS612036",
+      "productName": "TTD5612036 (Deprecated: TTS612036)",
       "country": "GANI",
       "productType": "Tile",
       "squareMeter": "1.44",
