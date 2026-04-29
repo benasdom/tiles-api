@@ -433,7 +433,7 @@ function updateSpacesListDisplay() {
             <div class="tr hide"></div><div class="tr hide"></div><div class="tr hide"></div>
             <div class="tr reduce hide"></div><div class="tr reduce hide"></div><div class="tr hide"></div>
             <div class="tr alignleft">GRANDTOTAL</div>
-            <div class="tr alignright">${combinedDiscounted.toFixed(2)}</div>
+            <div class="tr alignright">${(combinedDiscounted+ (0.2 * combinedDiscounted)).toFixed(2)}</div>
         </div>
     </div>
     <div class="preped">PREPARED BY: BEAUTIFUL HOME DECOR</div>
